@@ -1,16 +1,14 @@
-# This is a sample Python script.
+jmeno = input("Zadejte jméno: ")
+presents = ["auto", "pc", "panenka", "vysavač", "jídlo", "auto", "vysavač"]
+unique_presents = set(presents)
+print(unique_presents)
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+names = ["Petr", "Marie", "Káta", "Maminka", "Ivan"]
+for name, present in zip(names, presents):
+    print(f"{name} dostane {present}")
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+def get_present(name):
+    if name in names:
+        return presents[names.index(name)]
+    return "Neznám toto jméno."
+print(get_present(jmeno))
